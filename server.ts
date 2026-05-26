@@ -24,7 +24,7 @@ app.use('/accounts', accountsRouter);
 // Global error handler (must be last)
 app.use(errorHandler);
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 initialize().then(() => {
   app.listen(PORT, () => {
